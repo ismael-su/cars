@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="container">
+<table class="table table-striped table-bordered table-sm row-border hover" id="datatableexample" >
+  <thead>
+    <tr>
+      <th>vehicle_id</th>
+      <th>Class</th>
+      <th>Accuracy</th>
+      <th>Speed</th>
+      <th>Position</th>
+      <th>State</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr *ngFor="let vehicle of vehicles">
+    <td>{{vehicle.vehicle_id}}</td>
+    <td>{{vehicle.vehicle_class}}</td>
+    <td>{{vehicle.accuracy}}</td>
+    <td>{{vehicle.position}}</td>
+    <td>{{vehicle.speed}}</td>
+    <td>{{vehicle.state}}</td>
+    <td>{{vehicle.time}}</td>
+     </tr>
+  </tbody>
+</table>
+</div>
+
+<app-footer></app-footer>
