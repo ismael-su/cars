@@ -8,6 +8,7 @@ services:
       - 8000:80
     depends_on:
       - server
+      - client
 
   server:
     build:
@@ -29,6 +30,8 @@ services:
       context: client
       dockerfile: Dockerfile
     stdin_open: true
+    ports:
+      - 8001:4200
     volumes:
       - './client:/app:cached'
       - './client/node_modules:/app/node_modules:cached'
